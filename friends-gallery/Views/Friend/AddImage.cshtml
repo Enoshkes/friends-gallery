@@ -1,0 +1,16 @@
+﻿@model friends_gallery.ViewModel.FriendVM;
+
+<div id="image-backdrop" class="add-backdrop">
+    <div class="add-modal">
+        <form asp-action="AddImage" method="post" enctype="multipart/form-data">
+            <input asp-for="Id" value="@Model.Id" hidden />
+            <input asp-for="UploadedImage" type="file" />
+            <input type="submit" value="Save" />
+        </form>
+    </div>
+</div>
+
+
+<h1>Add Image</h1>
+<button type="button" onclick="displayModal()">Add Image</button>
+
